@@ -1,0 +1,4 @@
+*.exe
+/ipxfer4/*.obj
+/doomutils/snapshot/*.OBJ
+*.obj

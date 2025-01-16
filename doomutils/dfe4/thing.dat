@@ -1,0 +1,117 @@
+0    0000 ---- -        (nothing)
+1    0001 PLAY +        Player 1 start
+2    0002 PLAY +        Player 2 start
+3    0003 PLAY +        Player 3 start
+4    0004 PLAY +        Player 4 start
+5    0005 BKEY ab     $ Blue keycard
+6    0006 YKEY ab     $ Yellow keycard
+7    0007 SPID +      * SPIDER DEMON
+8    0008 BPAK a      $ Backpack
+9    0009 SPOS +      * FORMER HUMAN SERGEANT
+10   000a PLAY w        Bloody mess
+11   000b ---- -        Deathmatch start position
+12   000c PLAY w        Bloody mess
+13   000d RKEY ab     $ Red Keycard
+14   000e ---- -        Teleporter Landing
+15   000f PLAY n        Dead player
+16   0010 CYBR +      * CYBER-DEMON
+17   0011 CELP a      $ Cell charge pack
+18   0012 POSS a        Dead former human
+19   0013 SPOS a        Dead former sergeant
+20   0014 TROO a        Dead imp
+21   0015 SARG a        Dead demon
+22   0016 HEAD a        Dead cacodemon
+23   0017 SKUL a        Dead lost soul, invisible (they blow up when killed)
+24   0018 POL5 a        Pool of blood
+25   0019 POL1 a      * Impaled human
+26   001a POL6 ab     * Twitching impaled human
+27   001b POL4 a      * Skull on a pole
+28   001c POL2 a      * 5 skulls shish kebob
+29   001d POL3 ab     * Pile of skulls and candles
+30   001e COL1 a      * Tall green pillar
+31   001f COL2 a      * Short green pillar
+32   0020 COL3 a      * Tall red pillar
+33   0021 COL4 a      * Short red pillar
+34   0022 CAND a        Candle
+35   0023 CBRA a      * Candelabra
+36   0024 COL5 ab     * Short green pillar with beating heart
+37   0025 COL6 a      * Short red pillar with skull
+38   0026 RSKU ab     $ Red skullkey
+39   0027 YSKU ab     $ Yellow skullkey
+40   0028 BSKU ab     $ Blue skullkey
+41   0029 CEYE abcb   * Eye in symbol
+42   002a FSKU abc    * Flaming skull-rock
+43   002b TRE1 a      * Gray tree
+44   002c TBLU abcd   * Tall blue firestick
+45   002d TGRE abcd   * Tall green firestick
+46   002e TRED abcd   * Tall red firestick
+47   002f SMIT a      * Small brown scrub
+48   0030 ELEC a      * Tall, techno column
+49   0031 GOR1 abcb   *^Hanging victim, swaying, legs gone
+50   0032 GOR2 a      *^Hanging victim, arms out
+51   0033 GOR3 a      *^Hanging victim, 1-legged
+52   0034 GOR4 a      *^Hanging victim, upside-down, upper body gone
+53   0035 GOR5 a      *^Hanging severed leg
+54   0036 TRE2 a      * Large brown tree
+55   0037 SMBT abcd   * Short blue firestick
+56   0038 SMGT abcd   * Short green firestick
+57   0039 SMRT abcd   * Short red firestick
+58   003a SARG +      * SPECTRE
+59   003b GOR2 a       ^Hanging victim, arms out
+60   003c GOR4 a       ^Hanging victim, upside-down, upper body gone
+61   003d GOR3 a       ^Hanging victim, 1-legged
+62   003e GOR5 a       ^Hanging severed leg
+63   003f GOR1 abcb    ^Hanging victim, swaying, legs gone
+2001 07d1 SHOT a      $ Shotgun
+2002 07d2 MGUN a      $ Chaingun
+2003 07d3 LAUN a      $ Rocket launcher
+2004 07d4 PLAS a      $ Plasma gun
+2005 07d5 CSAW a      $ Chainsaw
+2006 07d6 BFUG a      $ BFG9000
+2007 07d7 CLIP a      $ Ammo clip
+2008 07d8 SHEL a      $ 4 shotgun shells
+2010 07da ROCK a      $ 1 rocket
+2011 07db STIM a      $ Stimpak
+2012 07dc MEDI a      $ Medikit
+2013 07dd SOUL abcdcb ! Soulsphere
+2014 07de BON1 abcdcb ! Health bonus
+2015 07df BON2 abcdcb ! Armor bonus
+2018 07e2 ARM1 ab     $ Green armor 100%
+2019 07e3 ARM2 ab     $ Blue armor 200%
+2022 07e6 PINV abcd   ! Invulnerability
+2023 07e7 PSTR a      ! Berserk Strength
+2024 07e8 PINS abcd   ! Invisibility
+2025 07e9 SUIT a      ! Radiation suit
+2026 07ea PMAP abcdcb ! Computer map
+2028 07ec COLU a      * Floor lamp
+2035 07f3 BAR1 ab+    * Barrel
+2045 07fd PVIS ab     ! Lite goggles
+2046 07fe BROK a      $ Box of Rockets
+2047 07ff CELL a      $ Cell charge
+2048 0800 AMMO a      $ Box of Ammo
+2049 0801 SBOX a      $ Box of Shells
+3001 0bb9 TROO +      * IMP
+3002 0bba SARG +      * DEMON
+3003 0bbb BOSS +      * BARON OF HELL
+3004 0bbc POSS +      * FORMER HUMAN
+3005 0bbd HEAD +      *^CACODEMON
+3006 0bbe SKUL +      *^LOST SOUL
+
+Dec. Hex   RAD   HT  SPD       Thing or class of things:
+
+-       -   16   56    -       Player
+7    0007  128  100   12       Spider-demon
+9    0009   20   56    8       Former sergeant
+16   0010   40  110   16       Cyber-demon
+58   003a   30   56    8       Spectre
+3001 0bb9   20   56    8       Imp
+3002 0bba   30   56    8       Demon
+3003 0bbb   24   64    8       Baron of Hell
+3004 0bbc   20   56    8       Former human
+3005 0bbd   31   56    8       Cacodemon
+3006 0bbe   16   56    8       Lost soul
+2035 07f3   10   42            barrel
+            20   16            all gettable things
+            16   16            most obstacles
+54   0036   32   16            large brown tree
+
