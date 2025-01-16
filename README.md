@@ -15,3 +15,7 @@ doomutils\snapshot:
 
   A screen capture TSR (terminate and stay resident) program used to capture the rendering process of the DOOM engine. This utility was created long before the DOOM source code was released and was used to capture images of how the engine was rendering frames to video memory. In the early to mid 90's, the inner workings of software like DOOM was much harder to reverse engineer but was still a facination to many programmers and hobbyists. This was just a utilty created to aid in the understanding of how the engine worked.
 
+
+doomutils\dfe4:
+
+  A front-end launcher for Doom. This utility was an absurdly large hobby project which provided a launcher for all of Doom's various game modes, a network file transfer utility for IPX networks, an EXE hacking utility for Doom v1.2, a map viewer, PWAD compiler, and various other functions related to Doom.
