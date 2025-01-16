@@ -1,0 +1,13 @@
+The following is a list of files included in this package:
+
+   BSPCOMP.EXE    - The real mode BSP compiler
+   BSPCDPMI.EXE   - The protected mode BSP compiler
+   BSPCOMP.DOC    - Document file
+   DPMIRTL.ZIP    - The Borland DPMI Runtime Library.
+
+If you plan to re-distribute these files, you can not charge anything for
+them and all of the above mentioned files, including this file must be
+included.
+
+Joshua Jackson
+jayjay@sal-junction.com

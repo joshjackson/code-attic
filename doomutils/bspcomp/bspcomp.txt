@@ -1,0 +1,57 @@
+BSPCOMP v1.00
+
+   This program compiles the Binary Space Partition information for DOOM,
+DOOM2, and Heretic levels.
+
+Included are executable for DOS real mode and DOS protected mode (DPMI). The
+real mode executable is about 15% faster than the DPMI version, but the 
+DPMI executable can handle nearly any size wad file you throw at it.
+
+NOTE: You would need a VERY large wad file to require the DPMI version...
+      I have successfully recompiled the DOOM.WAD, HERETIC.WAD, and DOOM2.WAD
+      files with the real mode executable.
+
+Special Features:
+
+   Will process ALL level entries in a WAD file or can be told to only
+   compile a single level with the -l[levname] parameter.
+
+   Will also copy any other resources (sounds, sprites, etc.) to output
+   wad if the -l parameter (levels only) is not used.
+
+   By using the -e parameter, the output levels will be TWICE their
+   original size.  This is great if you find a small deathmatch level
+   that is OK for two player, but is a bit small for 3 or 4 players.
+
+   Can flip a level around its Y axis to produce a mirror image of the
+   original... adds a new twist to your game play.
+
+   If you use the -p parameter, it makes for a very interesting effect.  This
+   option creates a fully "REJECTED" map.  To put it simply, no monsters on
+   the level will ever attack you, because they are all blind.  Another
+   interesting effect produced by this option is the fact that rockets no
+   longer have a blast area around them (you must be hit directly to be
+   injured) and neither do barrel explosions.  You can actually walk up and
+   punch a barrel and not get hurt. (-p stands for pacifist monsters)
+
+   It's resonably fast... it will compile the entire DOOM.WAD on my 
+   486DX4/100 in about 3:25.  Most average size wad files take it about 
+   5-10sec to compile, large levels are about 15-20sec.
+
+   For more info on the command line options, use the -h parameter.
+
+   For credit info type BSPCOMP with no parameters.
+
+File list:
+
+   BSPCOMP.EXE    The DOS real mode executable.
+   BSPCDPMI.EXE   The DOS protected mode executable.
+   RTM.EXE        Required by BSPCDPMI
+   DPMI16BI.OVL   Required by BSPCDPMI
+   README         More info on using BSPCOMP (TEXT)
+   README.COM     README file browser
+   BSPCOMP.TXT    This file
+
+   written by: Joshua Jackson
+               Jackson Software
+

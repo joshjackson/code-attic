@@ -1,0 +1,102 @@
+BSPCOMP v1.0 - DOOM/DOOM II/HERETIC BSP Node compiler (c)1995 Jackson Software
+
+NOTE: This compiler will NOT work for HEXEN wad files... the real mode version
+      simply returns a heap overflow and the DPMI version returns a general
+      protection fault... I need more info on HEXEN before I write a node
+      compiler that will work with it. (I noticed the BEHAVIOR entry in the
+      level info, but this is not the source of error.)
+
+This program is a cross breed between many of the other node compilers out
+there.  It incorporates code from DEU, BSP12X, WARM14, and IDBSP, as well as
+a few other tid-bits that I threw in.  It will automatically detect which 
+type of WAD file you are compiling.
+
+NOTE: A Math-CO is not required, but GREATLY speeds up the BSP building
+process.
+
+Usage of BSPCOMP is as follows:
+
+   BSPCOMP {infile[.wad]} [outfile[.wad]] [-h] [-l[levname]] [-e] [-f] [-o]
+
+   infile      The name of the input DOOM, DOOM II, or Heretic Wad file.
+   
+   outfile     The name of the output Wad file. (tmp.wad is default)
+   
+   -h          Displays the parameter help screen.
+   
+   -l[levname] Process level data only (Do not copy other resources into
+               outfile.)  If levname contains the name of a valid level,
+               only that level will be processed.
+   
+   -e          Expands the input levels to 200% of their original size.
+               This is achieved by multiplying the Things and Vertices
+               x and y co-ordinates by 2 before compiling BSP info.
+
+               This is great for those little deathmatch levels that work
+               great for two players, but are too small for 3 or 4 players.
+
+               WARNING: When you expand a level, some areas may become to
+               large to "jump".  If a certain area of the board requires
+               you to jump over a hole in the ground, you may want to
+               use DOOM's -turbo parameter.  As for Heretic, I hope they 
+               add a -turbo someday.
+
+   -f          Flip the level around its Y axis.  This produces a mirror
+               image of the original level.  This adds a new twist to things
+               and can even become down right confusing if you are very
+               familiar with the way a level used to be!
+
+               Credit:  I copied this idea from WARM14 by Robert Fenske Jr...
+                        COOL idea!
+
+   -o          I'm not sure why I added this option!  It causes the compiler
+               to do an exhaustive search for the best partition lines.  For
+               each call to the compiler's PickNode function, it will
+               make NumSegs^2 iterations.  This does produce about
+               a 2% reduction in the number of nodes that are generated.
+               Sounds ok, but the amount of time spent doing this is many,
+               many times greater the its native method.  I have yet to
+               notice a difference in game play with or without partition
+               optimization. (To put things into perspective, using the -o 
+               option will cause the compiler to make several MILLION more
+               calculations!!)
+
+               The method normally implemented by BSPCOMP is based on ID's
+               node builder source code.  The program will make 
+               40 * NumSegs iterations and will only go back and 
+               search through the list again if a good partition line 
+               could not be found.  So basically, the way I see it, if
+               it's good enough for ID to use on their own levels, it's
+               good enough for my node builder!
+
+               The only time this option might do some good, would be if
+               you had a level that had a zillion little sectors inside
+               one another. At this point, it might be a good idea to
+               do some massive searching for the best partition lines. But,
+               even then, I'm not sure it would make that big of a difference.
+
+This program was written in Borland Pascal 7.00.  It is mostly Object Oriented
+code that is part of a much larger "toolbox" that I have developed over the
+span of my Dooming.  I have not released the source code for all of the
+stuff that I have written for a few simple reasons... It's not commented, a
+good section is not complete or is littered with bugs, and who besides myself
+actually programs in PASCAL!?!?!? (I suppose if I had a good C compiler, I
+might use C... but I am not real fond of compilers that don't have integrated
+debugging environments such as gcc and the likes, and I can't afford Borland
+C++ 4.5).
+
+I did try to port this code into Borland C++ 3.1, but was found that the
+heap manager leaves much to be desired!!!  It will not even compile a single
+large level without leaving the heap so fragmented that crashes with an out
+of memory error.
+
+NOTE: The DPMI version of this program BSPCDPMI.EXE will handle any size WAD
+      file that you can throw at it, but is roughly 15% slower that its real
+      mode cousin.  You should also note that the real mode version is able
+      to re-compile the complete DOOM,DOOM II, or Heretic IWAD files without
+      running out of memory, and believe it or not, it does not use any EMS/
+      XMS/DISK memory swapping... how's that for efficient?
+
+   written by: Joshua Jackson
+               jjackson@vortech.net
+               
